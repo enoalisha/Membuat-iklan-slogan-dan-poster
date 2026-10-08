@@ -1,1 +1,0 @@
-# Membuat-iklan-slogan-dan-poster
