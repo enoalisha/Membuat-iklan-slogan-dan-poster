@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iklan, Slogan, dan Poster – Media Interaktif Bahasa Indonesia</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF8F0;--ink:#2B1B2E;--mut:#6B5A6E;--pri:#C2255C;--pri2:#FDE6EE;--acc:#FFD43B;--ok:#237A57;--okbg:#E3F5EC;--no:#B3402A;--nobg:#FCEBE6;--card:#fff;--line:#EAD9DD}
+@media(prefers-color-scheme:dark){:root{--bg:#1E1420;--ink:#F6ECF4;--mut:#BBA6BD;--pri:#FF8FB3;--pri2:#3A2036;--card:#2A1C2D;--line:#4A3450;--okbg:#17372B;--ok:#7FDDB0;--nobg:#3E211B;--no:#FFA591}}
+*{box-sizing:border-box}html,body{margin:0}
+body{font-family:Nunito,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:18px;line-height:1.55}
+header,main{max-width:860px;margin:auto;padding:16px}
+h1{font-size:1.5rem;font-weight:800;margin:0 0 10px}
+.steps{display:flex;gap:6px}
+.steps button{flex:1;border:0;border-bottom:4px solid var(--line);background:none;color:var(--mut);font:600 .85rem Nunito,sans-serif;padding:6px 2px;cursor:pointer}
+.steps .on{border-color:var(--pri);color:var(--ink);font-weight:800}.steps .done{border-color:var(--ok)}.steps button:disabled{opacity:.5;cursor:default}
+section{display:none;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}section.on{display:block}
+h2{font-size:1.45rem;margin:0 0 8px;font-weight:800}h3{margin:0 0 6px}p{margin:0 0 12px}.mut{color:var(--mut);font-size:.9rem}
+button,input,select{font:inherit;color:inherit}:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.btn{background:var(--pri);color:#fff;border:0;border-radius:10px;padding:12px 22px;font-weight:800;cursor:pointer;margin:8px 8px 0 0}
+@media(prefers-color-scheme:dark){.btn{color:#2B1B2E}}
+.btn.alt{background:var(--pri2);color:var(--pri)}.btn:disabled{opacity:.4;cursor:not-allowed}
+input{width:100%;padding:10px 12px;border:2px solid var(--line);border-radius:10px;background:var(--bg);margin:4px 0 14px}
+label{font-weight:600;font-size:.95rem}
+.tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tab{border:2px solid var(--line);background:var(--bg);border-radius:999px;padding:8px 18px;cursor:pointer;font-weight:600}
+.tab[aria-selected=true]{border-color:var(--pri);background:var(--pri2);font-weight:800}
+.def{border-left:5px solid var(--acc);padding:2px 0 2px 14px;margin-bottom:12px}
+ul{margin:0 0 12px;padding-left:22px}
+.tw{overflow-x:auto;margin-top:16px}table{border-collapse:collapse;width:100%;min-width:560px;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--pri2)}
+.q{font-weight:800;margin-bottom:10px}.bar{height:8px;background:var(--line);border-radius:8px;overflow:hidden;margin-bottom:16px}.bar i{display:block;height:100%;background:var(--pri);width:0;transition:width .3s}
+.opt{display:block;width:100%;text-align:left;border:2px solid var(--line);background:var(--bg);border-radius:10px;padding:10px 14px;margin-bottom:8px;cursor:pointer}
+.opt:disabled{cursor:default}.opt.ok{border-color:var(--ok);background:var(--okbg)}.opt.no{border-color:var(--no);background:var(--nobg)}
+.fb{border-radius:10px;padding:10px 14px;margin:10px 0}.fb.ok{background:var(--okbg);color:var(--ok)}.fb.no{background:var(--nobg);color:var(--no)}
+.big{font-size:2.6rem;font-weight:800;color:var(--pri);text-align:center}.c{text-align:center}
+.rv{border-top:1px solid var(--line);padding:8px 0;font-size:.95rem}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header><h1>Iklan, Slogan, dan Poster</h1><nav class="steps" id="steps" aria-label="Langkah"></nav></header>
+<main>
+
+<section id="s0">
+<h2>Selamat datang!</h2>
+<p>Di media ini kamu belajar pengertian, ciri-ciri, dan tujuan iklan, slogan, dan poster, lalu menguji pemahamanmu lewat kuis.</p>
+<label for="nm">Nama siswa</label><input id="nm" autocomplete="name">
+<label for="kl">Kelas</label><input id="kl" placeholder="Contoh: VIII-A">
+<button class="btn" id="go">Mulai belajar</button>
+</section>
+
+<section id="s1">
+<h2>Materi ringkas</h2>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div id="mat" aria-live="polite"></div>
+<div class="tw"><table>
+<caption class="mut" style="text-align:left;padding-bottom:6px">Perbandingan ciri utama</caption>
+<tr><th>Aspek</th><th>Iklan</th><th>Slogan</th><th>Poster</th></tr>
+<tr><td>Bentuk</td><td>Teks, gambar, atau video</td><td>Satu kalimat pendek</td><td>Gambar dan teks pada satu lembar</td></tr>
+<tr><td>Tujuan utama</td><td>Membujuk membeli atau menerima gagasan</td><td>Membuat pesan mudah diingat</td><td>Memberi informasi atau mengajak</td></tr>
+<tr><td>Panjang teks</td><td>Bisa panjang</td><td>Sangat singkat</td><td>Singkat dan padat</td></tr>
+<tr><td>Unsur visual</td><td>Boleh ada</td><td>Tidak wajib</td><td>Wajib dan menonjol</td></tr>
+<tr><td>Contoh</td><td>“Diskon 50% sepatu sekolah, khusus minggu ini!”</td><td>“Bersih itu sehat!”</td><td>Ajakan kerja bakti lengkap dengan waktu dan tempat</td></tr>
+</table></div>
+<button class="btn" id="n1">Mulai kuis</button>
+</section>
+
+<section id="s2">
+<h2>Kuis interaktif</h2>
+<div class="bar"><i id="pb"></i></div><div id="qa"></div>
+</section>
+
+<section id="s3">
+<h2>Hasil belajar</h2>
+<p class="c" id="who"></p><div class="big" id="sc"></div><p class="c" id="pr" style="font-weight:800"></p>
+<div id="rv"></div>
+<p class="mut" id="msg" role="status"></p>
+<button class="btn" id="sheet">Kirim nilai ke Google Sheet</button>
+<button class="btn alt" id="doc">Ekspor laporan (Google Docs/Word)</button>
+<button class="btn alt" id="again">Ulangi kuis</button>
+</section>
+
+</main>
+<script>
+/* ===== PENGATURAN GURU =====
+ Cara menghubungkan ke Google Sheet:
+ 1. Buat Google Sheet baru, lalu buka Ekstensi > Apps Script.
+ 2. Tempel kode ini lalu Deploy > New deployment > Web app (akses: Anyone):
+    function doPost(e){var d=JSON.parse(e.postData.contents);
+      SpreadsheetApp.getActiveSheet().appendRow([new Date(),d.nama,d.kelas,d.nilai,d.predikat]);
+      return ContentService.createTextOutput("ok");}
+ 3. Salin URL Web app, lalu ganti teks di bawah ini dengan URL tersebut. */
+const SHEET_URL="GANTI_DENGAN_URL_APPS_SCRIPT";
+
+const $=id=>document.getElementById(id);
+const M={
+"Iklan":{d:"Iklan adalah pesan yang bertujuan membujuk khalayak untuk membeli barang atau jasa, atau menerima suatu gagasan.",c:["Bersifat persuasif dan mengajak","Menarik perhatian dengan bahasa kreatif","Informasi tentang produk atau gagasan jelas","Disajikan lewat media cetak, elektronik, atau digital"],t:["Memperkenalkan produk","Membujuk khalayak","Meningkatkan penjualan","Membangun citra"]},
+"Slogan":{d:"Slogan adalah kalimat singkat yang menarik dan mudah diingat untuk menyampaikan pesan tentang produk, organisasi, atau gagasan.",c:["Singkat dan padat","Menarik dan mudah diingat","Mengandung ajakan atau pesan inti","Sering berirama atau berima"],t:["Menarik perhatian","Meyakinkan khalayak","Membangun citra","Mengingatkan pesan utama"]},
+"Poster":{d:"Poster adalah media berupa gambar dan tulisan yang dipasang di tempat umum untuk menyampaikan informasi atau ajakan.",c:["Gambar menarik dan menonjol","Teks singkat dan jelas","Warna mencolok","Terbaca dari jarak jauh"],t:["Memberi informasi","Mengajak berbuat sesuatu","Mempromosikan kegiatan atau produk","Menyadarkan masyarakat"]}};
+const L=a=>"<ul>"+a.map(x=>"<li>"+x+"</li>").join("")+"</ul>";
+const tabs=$("tabs");
+Object.keys(M).forEach((k,i)=>{const b=document.createElement("button");b.className="tab";b.role="tab";b.textContent=k;
+b.onclick=()=>{tabs.querySelectorAll(".tab").forEach(x=>x.setAttribute("aria-selected","false"));b.setAttribute("aria-selected","true");
+const m=M[k];$("mat").innerHTML=`<div class="def">${m.d}</div><h3>Ciri-ciri</h3>${L(m.c)}<h3>Tujuan</h3>${L(m.t)}`};
+tabs.appendChild(b);if(!i)b.click()});
+
+const names=["Identitas","Materi","Kuis","Hasil"];let max=0;const st=$("steps");
+names.forEach((n,i)=>{const b=document.createElement("button");b.textContent=n;b.onclick=()=>show(i);st.appendChild(b)});
+function show(i){max=Math.max(max,i);document.querySelectorAll("section").forEach((s,k)=>s.classList.toggle("on",k===i));
+[...st.children].forEach((b,k)=>{b.className=k===i?"on":k<i?"done":"";b.disabled=k>max});window.scrollTo({top:0})}
+$("go").onclick=()=>{if(!$("nm").value.trim()){$("nm").focus();$("nm").style.borderColor="var(--no)";return}show(1)};
+$("n1").onclick=()=>{show(2);quiz(0)};
+
+const Q=[
+["Tujuan utama iklan adalah…",["Menceritakan pengalaman pribadi","Menyampaikan berita kejadian","Membujuk khalayak membeli produk atau menerima gagasan","Menghibur pembaca"],2,"Iklan bersifat persuasif: membujuk khalayak."],
+["Ciri utama slogan adalah…",["Singkat, menarik, dan mudah diingat","Panjang dan rinci","Berisi data statistik","Tidak mengandung pesan"],0,"Slogan berupa kalimat pendek yang mudah diingat."],
+["“Bersih itu sehat, buang sampah pada tempatnya!” termasuk…",["Iklan komersial","Slogan","Poster","Laporan"],1,"Kalimat itu pendek, mengajak, dan mudah diingat, jadi termasuk slogan."],
+["Ciri yang paling membedakan poster adalah…",["Berupa paragraf panjang","Hanya berisi angka","Tidak memakai gambar","Gabungan gambar menarik dan teks singkat yang terbaca dari jauh"],3,"Poster mengandalkan visual yang kuat dengan teks singkat."],
+["Kalimat yang bersifat persuasif adalah…",["Toko buka pukul 08.00.","Ayo, miliki sekarang sebelum kehabisan!","Kemarin hujan deras.","Sepatu ini berwarna hitam."],1,"Kalimat ajakan seperti “Ayo, miliki sekarang” bersifat persuasif."]];
+let score,ans=[];
+function quiz(i){const a=$("qa");if(!i){score=0;ans=[]}$("pb").style.width=(i/Q.length*100)+"%";
+if(i>=Q.length){return result()}
+const q=Q[i];a.innerHTML=`<p class="mut">Soal ${i+1} dari ${Q.length}</p><div class="q">${q[0]}</div>`;
+q[1].forEach((o,k)=>{const b=document.createElement("button");b.className="opt";b.textContent=o;
+b.onclick=()=>{a.querySelectorAll(".opt").forEach((x,j)=>{x.disabled=true;if(j===q[2])x.classList.add("ok")});
+const g=k===q[2];if(g)score++;else b.classList.add("no");ans.push(g);
+const f=document.createElement("div");f.className="fb "+(g?"ok":"no");f.textContent=(g?"Benar. ":"Belum tepat. ")+q[3];a.appendChild(f);
+const nb=document.createElement("button");nb.className="btn";nb.textContent=i<Q.length-1?"Soal berikutnya":"Lihat hasil";nb.onclick=()=>quiz(i+1);a.appendChild(nb);nb.focus()};a.appendChild(b)})}
+let nilai=0,pred="";
+function result(){nilai=Math.round(score/Q.length*100);pred=nilai>=90?"Sangat Baik":nilai>=80?"Baik":nilai>=70?"Cukup":"Perlu Bimbingan";
+$("who").textContent=$("nm").value+($("kl").value?" – Kelas "+$("kl").value:"");$("sc").textContent=nilai;$("pr").textContent=pred;
+$("rv").innerHTML="<h3>Kunci jawaban dan penjelasan</h3>"+Q.map((q,i)=>`<div class="rv"><b>${i+1}. ${q[0]}</b><br>${ans[i]?"✔ Benar":"✘ Salah"}. Jawaban: ${q[1][q[2]]}. ${q[3]}</div>`).join("");
+$("msg").textContent="";show(3)}
+$("sheet").onclick=async()=>{const m=$("msg");
+if(SHEET_URL.indexOf("GANTI")===0){m.textContent="URL Google Sheet belum diatur. Guru perlu mengganti SHEET_URL pada kode (lihat petunjuk di bagian atas skrip).";return}
+m.textContent="Mengirim…";
+try{await fetch(SHEET_URL,{method:"POST",mode:"no-cors",body:JSON.stringify({nama:$("nm").value,kelas:$("kl").value,nilai,predikat:pred})});m.textContent="Nilai terkirim. Periksa Google Sheet untuk memastikan."}
+catch(e){m.textContent="Gagal mengirim. Periksa koneksi internet atau URL Apps Script."}};
+$("doc").onclick=()=>{const h=`<html><meta charset="utf-8"><body><h2>Laporan Hasil Belajar</h2><p>Materi: Iklan, Slogan, dan Poster</p><p>Nama: ${$("nm").value}<br>Kelas: ${$("kl").value}<br>Nilai: ${nilai} (${pred})<br>Tanggal: ${new Date().toLocaleDateString("id-ID")}</p>${$("rv").innerHTML}</body></html>`;
+const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([h],{type:"application/msword"}));a.download="Laporan_"+($("nm").value||"Siswa")+".doc";a.click();
+$("msg").textContent="Laporan diunduh. Buka dengan Google Docs atau Word."};
+$("again").onclick=()=>{show(2);quiz(0)};
+show(0);
+</script>
+</body>
+</html>
